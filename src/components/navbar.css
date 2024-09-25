@@ -21,10 +21,8 @@
     z-index: 10;
     align-items: center;
     margin: auto;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    max-height: 80px;
 }
-
-
 
 .navbar a, button {
     text-decoration: none;
@@ -38,13 +36,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 16px;
-    transition: opacity 0.5s ease;
 }
 
 #link-home {
     font-size: 18px;
     font-weight: 450;
     margin-right: 10%;
+    flex: 0 0 auto;
 }
 
 .navbar .navbarlogo {
@@ -59,7 +57,55 @@ button {
     cursor: pointer;
 }
 
-/*Make sure that menu bar doesn't display for screens above 660px*/
+#menu-open {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+@keyframes navbarAnim {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#navbar[data-expanded="true"] #link-about {
+    display: flex;
+    visibility: visible;
+    animation: navbarAnim 0.5s ease forwards;
+    animation-delay: 0ms;
+}
+#navbar[data-expanded="true"] #link-blog {
+    display: flex;
+    visibility: visible;
+    animation: navbarAnim 0.5s ease forwards;
+    animation-delay: 100ms;
+}
+#navbar[data-expanded="true"] #link-library {
+    display: flex;
+    visibility: visible;
+    animation: navbarAnim 0.5s ease forwards;
+    animation-delay: 200ms;
+}
+#navbar[data-expanded="true"] #link-stack {
+    display: flex;
+    visibility: visible;
+    animation: navbarAnim 0.5s ease forwards;
+    animation-delay: 300ms;
+}
+#navbar[data-expanded="true"] #link-contact {
+    display: flex;
+    visibility: visible;
+    animation: navbarAnim 0.5s ease forwards;
+    animation-delay: 400ms;
+}
+
+/*Media Queries*/
 @media screen and (min-width: 660px) {
     #menu-open {
         display: none;
@@ -69,46 +115,27 @@ button {
 
 @media screen and (max-width: 900px) {
     #link-library {
+        visibility: hidden;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
         display: none;
     }
 }
 
 @media screen and (max-width: 776px) {
     #link-stack {
+        visibility: hidden;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
         display: none;
     }
 }
-
-@media screen and (max-width: 660px) {
-    #menu-open {
-        display: flex;
-    }
-    #link-blog {
-        display: none;
-    }
-    #link-home {
-        margin-right: 5%;
-    }
-
-}
-
-@media screen and (max-width: 610px) {
-    #link-about {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #link-contact {
-        display: none;
-    }
-}
-
 
 @media screen and (max-width: 350px) {
     #link-home {
         margin-right: 0px;
         font-size: 0.9em;
+        
     }
     .navbar .navbarlogo {
         margin-right: 5px;
@@ -117,16 +144,52 @@ button {
     .navbar a {
         padding: 15px;
     }
+    #navbar[data-expanded="true"] a {
+        font-size: 0.8em;
+    }
+    #menu-open img {
+        width: 20px;
+    }
 }
 
 @media screen and (max-width: 660px) {
     #navbar[data-expanded="true"] {
         flex-direction: column;
-        max-height: 450px;
-        opacity: 1;
+        flex-wrap: wrap;
+        max-height: 400px;
+        align-items: flex-start;
     }
     #navbar[data-expanded="true"] a {
         display: flex;
-        opacity: 1;
+    }
+    #navbar[data-expanded="true"] #menu-open {
+        top: -162px;
+    }
+    #menu-open {
+        display: flex;
+        flex: 0 0 auto;
+    }
+    #link-blog {
+        visibility: hidden;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
+        display: none;
+    }
+    #link-home {
+        margin-right: 5%;
+    }
+    #link-about {
+        visibility: hidden;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
+        display: none;
+    }
+    #link-contact {
+        visibility: hidden;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
+        display: none;
     }
 }
+
+
