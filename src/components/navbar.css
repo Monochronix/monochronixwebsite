@@ -61,6 +61,7 @@ button {
     position: absolute;
     top: 0px;
     right: 5px;
+    flex: 0 0 auto;
 }
 
 @keyframes navbarAnim {
@@ -143,7 +144,7 @@ button {
         display: flex;
     }
     #navbar[data-expanded="true"] #menu-open {
-        top: -162px;
+        top: -160px;
     }
     #menu-open {
         display: flex;
