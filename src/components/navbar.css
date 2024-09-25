@@ -112,7 +112,6 @@ button {
     }
 }
 
-
 @media screen and (max-width: 900px) {
     #link-library {
         visibility: hidden;
@@ -131,26 +130,7 @@ button {
     }
 }
 
-@media screen and (max-width: 350px) {
-    #link-home {
-        margin-right: 0px;
-        font-size: 0.9em;
-        
-    }
-    .navbar .navbarlogo {
-        margin-right: 5px;
-        width: 15px;
-    }
-    .navbar a {
-        padding: 15px;
-    }
-    #navbar[data-expanded="true"] a {
-        font-size: 0.8em;
-    }
-    #menu-open img {
-        width: 20px;
-    }
-}
+
 
 @media screen and (max-width: 660px) {
     #navbar[data-expanded="true"] {
