@@ -51,6 +51,7 @@
     vertical-align: middle;
 }
 
+/*Make sure that only the icon shows*/
 button {
     border: none;
     background: transparent;
@@ -64,85 +65,41 @@ button {
     flex: 0 0 auto;
 }
 
-@keyframes navbarAnim {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-#navbar[data-expanded="true"] #link-about {
-    display: flex;
-    visibility: visible;
-    animation: navbarAnim 0.5s ease forwards;
-    animation-delay: 0ms;
-}
-#navbar[data-expanded="true"] #link-blog {
-    display: flex;
-    visibility: visible;
-    animation: navbarAnim 0.5s ease forwards;
-    animation-delay: 100ms;
-}
-#navbar[data-expanded="true"] #link-library {
-    display: flex;
-    visibility: visible;
-    animation: navbarAnim 0.5s ease forwards;
-    animation-delay: 200ms;
-}
-#navbar[data-expanded="true"] #link-stack {
-    display: flex;
-    visibility: visible;
-    animation: navbarAnim 0.5s ease forwards;
-    animation-delay: 300ms;
-}
-#navbar[data-expanded="true"] #link-contact {
-    display: flex;
-    visibility: visible;
-    animation: navbarAnim 0.5s ease forwards;
-    animation-delay: 400ms;
-}
-
-/*Media Queries*/
+/*Menu icon shouldn't display until width is as low as 660px.*/
 @media screen and (min-width: 660px) {
     #menu-open {
         display: none;
     }
 }
 
+/*Library and stack will disappear at the appropriate breakpoints*/
 @media screen and (max-width: 900px) {
     #link-library {
-        visibility: hidden;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-        opacity: 0;
         display: none;
     }
 }
 
 @media screen and (max-width: 776px) {
     #link-stack {
-        visibility: hidden;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-        opacity: 0;
         display: none;
     }
 }
+/*End of library and stack breakpoints*/
 
-
-
+/*Start of mobile navbar functionality*/
 @media screen and (max-width: 660px) {
+    /*How navbar should be displayed when expanded on mobile*/
     #navbar[data-expanded="true"] {
         flex-direction: column;
         flex-wrap: wrap;
         max-height: 400px;
         align-items: flex-start;
     }
+    /*Show all links when expanded*/
     #navbar[data-expanded="true"] a {
         display: flex;
     }
+    /*Change from flexbox row to column, so make sure icon doesn't move*/
     #navbar[data-expanded="true"] #menu-open {
         top: -160px;
     }
@@ -150,27 +107,78 @@ button {
         display: flex;
         flex: 0 0 auto;
     }
+    /*Irrelevant to expansion, it's just that when the width goes 660px and below, these links should disappear.*/
     #link-blog {
-        visibility: hidden;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-        opacity: 0;
         display: none;
     }
-    #link-home {
-        margin-right: 5%;
-    }
     #link-about {
-        visibility: hidden;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-        opacity: 0;
         display: none;
     }
     #link-contact {
-        visibility: hidden;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-        opacity: 0;
         display: none;
+    }
+    /*End of link hiding responsiveness*/
+}
+
+/*Start of satisfying link navbar animation*/
+@keyframes navbarAnim {
+    from {
+        filter: blur(4px);
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
+/*Every link except homepage link should do the satisfying animation*/
+#navbar[data-expanded="true"] a:not(:first-child) {
+    opacity: 0;
+    animation: navbarAnim 0.5s ease-in-out forwards;
+}
 
+/*Utilize the nth child selector to create a stagger effect.*/
+#navbar[data-expanded="true"] a:nth-child(2) {
+    animation-delay: 0ms;
+}
+#navbar[data-expanded="true"] a:nth-child(3) {
+    animation-delay: 200ms;
+}
+#navbar[data-expanded="true"] a:nth-child(4) {
+    animation-delay: 400ms;
+}
+#navbar[data-expanded="true"] a:nth-child(5) {
+    animation-delay: 600ms;
+}
+#navbar[data-expanded="true"] a:nth-child(6) {
+    animation-delay: 800ms;
+}
+/*End of navbar links for mobile responsiveness*/
+
+/*Start of menu icon transition*/
+
+/*Define spin class*/
+.spin {
+    animation: spin 0.5s ease forwards;
+}
+
+/*Define spin animation*/
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        filter: none;
+    }
+
+    40% {
+        filter: blur(2px);
+    }
+    100% {
+        transform: rotate(360deg);
+        filter: none;
+    }
+}
+
+/*End of menu icon transition*/
