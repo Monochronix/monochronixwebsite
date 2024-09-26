@@ -151,7 +151,7 @@ button {
 /*Every link except homepage link should do the satisfying animation*/
 #navbar[data-expanded="true"] a:not(:first-child) {
     opacity: 0;
-    animation: navbarAnim 0.5s ease-in-out forwards;
+    animation: navbarAnim 0.5s ease forwards;
 }
 
 /*Utilize the nth child selector to create a stagger effect.*/
@@ -194,5 +194,4 @@ button {
         filter: none;
     }
 }
-
 /*End of menu icon transition*/
