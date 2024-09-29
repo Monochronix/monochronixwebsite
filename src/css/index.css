@@ -35,6 +35,13 @@ body {
     display: none;
 }
 
+/*For larger screens, display a second word*/
+@media screen and (min-width: 801px) {
+    .hero-headline::after {
+        content: "FINANCE";
+        display: block;
+    }
+}
 /*Line break for smaller screens*/
 @media screen and (max-width: 800px) and (min-width: 451px) {
     .mobile-headline-break {
