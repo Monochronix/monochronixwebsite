@@ -27,7 +27,7 @@
     top: 16px;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 100;
     align-items: center;
     margin: auto;
     max-height: 80px;
@@ -135,6 +135,21 @@ button {
     }
     /*End of link hiding responsiveness*/
 }
+
+/*Start of ultrawide monitor support*/
+@media (min-width: 2560px) {
+    .navbar a, button {
+        font-size: 20px;
+    }
+    .navbar {
+        max-width: 1000px;
+        padding: 5px 15px;
+    }
+    #link-home {
+        font-size: 20px;
+    }
+}
+/*End of ultrawide monitor support*/
 
 /*Start of satisfying link navbar animation*/
 @keyframes navbarAnim {
