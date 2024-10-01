@@ -195,8 +195,13 @@ button {
     }
     /*Change from flexbox row to column, so make sure icon doesn't move*/
     #menu-open {
+        top: 3px;
         display: flex;
         flex: 0 0 auto;
+    }
+    /*Lower padding on mobile*/
+    .navbar {
+        padding: 0 10px;
     }
     /*Irrelevant to expansion, it's just that when the width goes 660px and below, these links should disappear.*/
     #link-blog {
