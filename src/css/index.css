@@ -61,11 +61,8 @@ body {
     .mobile-headline {
         display: block;
         font-family: "Inter", monospace;
-        font-size: 20vw;
+        font-size: 19vw;
         font-weight: 900;
         
-    }
-    .mobile-headline-chronix {
-        letter-spacing: normal;
     }
 }
