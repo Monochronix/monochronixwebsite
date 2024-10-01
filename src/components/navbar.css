@@ -23,6 +23,7 @@
     -webkit-backdrop-filter: blur( 8px );
     border-radius: 16px;
     border-top: 1.5px solid rgba(130,130,130,0.4);
+    border-left: 0.1px solid rgba(130,130,130,0.4);
     display: flex;
     justify-content: space-between;
     position: fixed;
