@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 * {
     scrollbar-color: #7b7b7b #08090a;
@@ -22,7 +23,6 @@ body {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    justify-content: center;
     position: relative;
     max-width: 2156px;
     margin: auto;
@@ -43,10 +43,29 @@ body {
     .hero-headline {
         font-size: 200px;
     }
+    .mobile-headline {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 500px) {
-    .hero-headline {
-        margin-top: -50px;
+@media screen and (max-width: 2155px) and (min-width: 661px) {
+    .mobile-headline {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .non-mobile-headline {
+        display: none;
+    }
+    .mobile-headline {
+        display: block;
+        font-family: "Inter", monospace;
+        font-size: 20vw;
+        font-weight: 900;
+        
+    }
+    .mobile-headline-chronix {
+        letter-spacing: normal;
     }
 }
