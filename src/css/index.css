@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 
 * {
     scrollbar-color: #7b7b7b #08090a;
@@ -13,19 +14,19 @@
 }
 
 body {
-    background-color: #08090a;
     overflow-x: hidden;
+    background-color: #07080a;
 }
 
 .hero-section {
-    display: flex; /* Add this */
-    flex-direction: column; /* Add this to stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
     position: relative;
     max-width: 2156px;
     margin: auto;
-    height: 100vh; /* Ensure it takes the full height for vertical centering */
+    height: 100vh;
 }
 
 
@@ -33,9 +34,10 @@ body {
     color: #FFD700;
     font-family: "Inter", sans-serif;
     text-align: center;
-    margin: 30vh 0;
+    margin: 25vh 0;
     font-size: 10vw;
 }
+
 
 @media screen and (min-width: 2156px) {
     .hero-headline {
