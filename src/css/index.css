@@ -79,9 +79,7 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-    .navbar-area {
-        border: none;
-    }
+
     .hero-section {
         border: none;
         background: transparent;
