@@ -9,10 +9,6 @@
     background: #4d4d4d;
 }
 
-*:focus {
-    outline: none;
-}
-
 * {
     -webkit-tap-highlight-color: transparent;
 }
