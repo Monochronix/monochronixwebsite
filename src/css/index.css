@@ -30,8 +30,8 @@ body {
     overflow-x: hidden;
     background-color: #07080a;
     --sb-track-color: #232E33;
-    --sb-thumb-color: #d86b2d;
-    --sb-size: 10px;
+    --sb-thumb-color: #ff7c4d;
+    --sb-size: 12px;
 }
 
 .navbar-area {
