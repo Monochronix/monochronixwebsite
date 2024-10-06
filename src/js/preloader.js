@@ -1,7 +1,9 @@
 let loadingPercentage = 0;
-const totalLoadingTime = 3000;
+const totalLoadingTime = 2500;
 const fadeOutDuration = 500;
 const minimumVisibleDuration = totalLoadingTime - fadeOutDuration;
+
+document.body.classList.add('no-scroll');
 
 const loadingInterval = setInterval(() => {
     loadingPercentage += Math.floor(Math.random() * 10) + 1;
@@ -31,6 +33,7 @@ window.addEventListener("load", () => {
                     if (content) {
                         content.style.display = 'block';
                     }
+                    document.body.classList.remove('no-scroll');
                 }, fadeOutDuration);
             }, remainingTime);
         }

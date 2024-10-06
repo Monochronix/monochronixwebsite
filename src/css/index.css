@@ -32,6 +32,9 @@
 
 body {
     background-color: #07080a;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    
 }
   
 
@@ -55,9 +58,9 @@ body {
     align-items: center; 
     position: relative;
     margin: auto;
-    height: 100vh;
+    height: 1348px;
     width: 90vw;
-    top: 114px;
+    top: 95px;
     max-width: 1300px;
 }
 
@@ -121,8 +124,8 @@ body {
     flex-direction: column;
     gap: 150px;
     position: absolute;
-    height: 100vh;
-    top: 123px;
+    height: 1348px;
+    top: 94px;
     left: 0;
     width: 5vw;
     justify-content: space-around;
@@ -143,9 +146,9 @@ body {
     flex-direction: column;
     gap: 150px;
     position: absolute;
-    top: 123px;
+    top: 94px;
     right: 0;
-    height: 100vh;
+    height: 1348px;
     width: 5vw;
     justify-content: space-around;
     padding-left: 100px;
@@ -241,3 +244,13 @@ body {
 }
 /*End Media Queries for Hero Page Side Text*/
 
+/*Start End of Hero Page*/
+.hero-end {
+    border: none;
+    height: 2px;
+    background-color: #f8f6d8;
+    width: 100vw;
+    position: relative;
+    right: 15px;
+    top: 87px;
+}
