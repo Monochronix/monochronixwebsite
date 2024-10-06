@@ -11,6 +11,7 @@
     <link rel="icon" href="/assets/favicon/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" href="/assets/favicon/android-chrome-512x512.png" sizes="512x512">
     <!--Favicon End-->
+    <link rel="stylesheet" href="/src/css/preloader.css">
     <link rel="stylesheet" href="/src/css/index.css">
     <link rel="stylesheet" href="/src/components/navbar.css">
     <!--Open Graph Protocol Start-->
@@ -30,6 +31,10 @@
     <title>Monochronix | Finance + Art</title>
 </head>
 <body>
+    <div class="preloader" id="preloader">
+        <div class="loader-text" id="loaderText">0%</div>
+    </div>
+
     <div class="navbar-area">
         <nav class="navbar" id="navbar">
             <a href="/" id="link-home"><img src="/assets/images/hero/monochronixlogo.png" class="navbarlogo" aria-hidden="true">Monochronix</a>
@@ -72,10 +77,12 @@
     <div class="hero-section">
         <h1 class="hero-headline"><span class="non-mobile-headline">MONOCHRONIX<br><span class="desktop-headline-finance">FINANCE</span></span><span class="mobile-headline">MONO<br>CHRONIX<br>FINANCE</span></h1>      
     </div>  
+    <script src="/src/js/preloader.js"></script>
     <!--Start GSAP Imports-->
     <script src="/src/js/gsap/gsap.min.js"></script>
     <script src="/src/js/gsap/ScrollTrigger.min.js"></script>
     <script src="/src/js/gsap/TextPlugin.min.js"></script>
+    <!--End GSAP Imports-->
     <script src="/src/js/animations/scrollanimations.js" defer></script>
     <script src="/src/js/navbar/navbarExpand.js" defer></script>
     <script src="/src/js/navbar/navbarIcon.js" defer></script>

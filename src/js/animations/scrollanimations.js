@@ -11,5 +11,6 @@ gsap.fromTo(".hero-headline", {
     opacity: 1,
     filter: "blur(0px)",
     duration: 0.8,
-    ease: "power1.inOut"
+    ease: "power1.inOut",
+    delay: 3
 });
