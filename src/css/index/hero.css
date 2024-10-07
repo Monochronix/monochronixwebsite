@@ -29,17 +29,14 @@
     }
 }
 
-
 body {
-    background-color: #07080a;
+    background-color: #0e100f;
     overscroll-behavior: none;
     overflow-x: hidden;
-    
 }
   
-
 .navbar-area {
-    background-color: #07080a;
+    background-color: #0e100f;
     border-bottom: 2px solid #f8f6d8;
     position: fixed;
     top: 0;
@@ -58,7 +55,7 @@ body {
     align-items: center; 
     position: relative;
     margin: auto;
-    height: 1348px;
+    height: 1200px;
     width: 90vw;
     top: 95px;
     max-width: 1300px;
@@ -90,6 +87,7 @@ body {
     .mobile-headline {
         display: none;
     }
+
 }
 
 @media screen and (min-width: 661px) {
@@ -102,6 +100,7 @@ body {
     .hero-section {
         border: none;
         background: transparent;
+        height: 900px;
     }
 }
 
@@ -115,6 +114,9 @@ body {
         font-size: 19vw;
         font-weight: 900;
     }
+    .hero-section {
+        height: 900px;
+    }
 }
 /*Headline Media Queries Start*/
 
@@ -124,7 +126,7 @@ body {
     flex-direction: column;
     gap: 150px;
     position: absolute;
-    height: 1348px;
+    height: 1200px;
     top: 94px;
     left: 0;
     width: 5vw;
@@ -148,7 +150,7 @@ body {
     position: absolute;
     top: 94px;
     right: 0;
-    height: 1348px;
+    height: 1200px;
     width: 5vw;
     justify-content: space-around;
     padding-left: 100px;
@@ -171,7 +173,6 @@ body {
     color: #f8f6d8;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.5em;
-    
 }
 .hero-page-side-text-right {
     white-space: nowrap;
@@ -220,7 +221,7 @@ body {
 }
 @media screen and (max-width: 1830px) and (min-width: 1460px) {
     .hero-page-side-text-right-container {
-        padding-left: calc(((100vw - 1300px) / 2) * 0.2)
+        padding-left: calc(((100vw - 1300px) / 2) * 0.2);
     }
     .hero-page-side-text-left-container {
         padding-right: calc(((100vw - 1300px) / 2) * 0.2);
@@ -234,6 +235,7 @@ body {
         padding-right: 0;
     }
 }
+
 @media screen and (max-width: 1000px) {
     .hero-page-side-text-right-container {
         display: none;
@@ -247,10 +249,10 @@ body {
 /*Start End of Hero Page*/
 .hero-end {
     border: none;
-    height: 2px;
+    height: 3px;
     background-color: #f8f6d8;
     width: 100vw;
     position: relative;
-    right: 15px;
     top: 87px;
 }
+/*End end of Hero Page*/
