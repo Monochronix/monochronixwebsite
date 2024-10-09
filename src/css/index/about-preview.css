@@ -12,10 +12,10 @@
 .about-content {
     border-left: 2px solid #f8f6d8;
     border-right: 2px solid #f8f6d8;
-    width: 90vw;
+    width: 80vw;
     height: 990px;
     margin: auto;
-    max-width: 1300px;
+    max-width: 1200px;
     padding-top: 10px;
 }
 
@@ -36,7 +36,7 @@
     height: 1000px;
     top: 0px;
     left: 0;
-    width: 5vw;
+    width: 10vw;
     justify-content: space-around;
     padding-right: 100px;
     box-sizing: border-box;
@@ -59,7 +59,7 @@
     top: 0px;
     right: 0;
     height: 1000px;
-    width: 5vw;
+    width: 10vw;
     justify-content: space-around;
     padding-left: 100px;
     box-sizing: border-box;
@@ -109,26 +109,26 @@
 
 @media screen and (min-width: 1460px) {
     .about-side-text-left-container {
-        width: calc((100vw - 1300px) / 2);
+        width: calc((100vw - 1200px) / 2);
     }
     .about-side-text-right-container {
-        width: calc((100vw - 1300px) / 2);
+        width: calc((100vw - 1200px) / 2);
     }
 }
 @media screen and (max-width: 1460px) {
     .about-side-text-right-container {
-        padding-left: 0;
+        padding-left: 20px;
     }
     .about-side-text-left-container {
-        padding-right: 0;
+        padding-right: 20px;
     }
 }
 @media screen and (max-width: 1830px) and (min-width: 1460px) {
     .about-side-text-left-container {
-        padding-right: calc(((100vw - 1300px) / 2) * 0.2);
+        padding-right: calc(((100vw - 1200px) / 2) * 0.3);
     }
     .about-side-text-right-container {
-        padding-left: calc(((100vw - 1300px) / 2) * 0.2);
+        padding-left: calc(((100vw - 1200px) / 2) * 0.3);
     }
 }
 @media screen and (max-width: 1000px) {
@@ -158,7 +158,7 @@
 }
 @media screen and (max-width: 1850px) {
     .about-headline {
-        font-size: 18vw;
+        font-size: 17vw;
     }
 }
 /*End media query for headlines*/
