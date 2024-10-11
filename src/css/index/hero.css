@@ -115,7 +115,12 @@ body {
         font-weight: 900;
     }
     .hero-section {
-        height: 900px;
+        height: 800px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .hero-section {
+        height: 600px;
     }
 }
 /*Headline Media Queries Start*/
@@ -245,6 +250,46 @@ body {
     }
 }
 /*End Media Queries for Hero Page Side Text*/
+
+.hero-image {
+    position: absolute;
+    bottom: 40px;
+    width: 100vw;
+    max-width: 1000px;
+    height: auto;
+    object-fit: cover;
+}
+
+/*Start Hero Image Media Queries*/
+@media screen and (max-width: 1000px) and (min-width: 701px) {
+    .hero-image {
+        bottom: -150px;
+    }
+}
+@media screen and (max-width: 700px) and (min-width: 661px) {
+    .hero-image {
+        bottom: 100px;
+    }
+}
+@media screen and (max-width: 660px) and (min-width: 551px) {
+    .hero-image {
+        width: 100vw;
+        bottom: 50px;
+    }
+}
+@media screen and (max-width: 550px) and (min-width: 401) {
+    .hero-image {
+        width: 100vw;
+        bottom: 250px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .hero-image {
+        width: 100vw;
+        bottom: 50px;
+    }
+}
+/*End Hero Image Media Queries*/
 
 /*Start End of Hero Page*/
 .hero-end {

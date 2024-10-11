@@ -32,10 +32,10 @@ gsap.from(".about-headline", {
 
 gsap.from(".hero-headline", {
     y: 100,
-    delay: 2.8,
+    delay: 2,
     stagger: 0.2,
     opacity: 0,
-    duration: 1,
+    duration: 1.5,
     scrollTrigger: {
         trigger: ".hero-headline"
     }
