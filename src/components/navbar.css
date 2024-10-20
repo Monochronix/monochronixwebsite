@@ -57,8 +57,8 @@
 
 #link-home {
     color: #e5e5e5;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 800;
     margin-right: 13vw;
     flex: 0 0 auto;
     font-family: "Raleway", sans-serif;
@@ -115,7 +115,7 @@
 
 .navbar .navbarlogo {
     width: 30px;
-    margin-right: 10px;
+    margin-right: 20px;
     vertical-align: middle;
 }
 
